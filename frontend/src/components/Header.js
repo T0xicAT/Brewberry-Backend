@@ -20,7 +20,7 @@ const Header = () => {
       <Navbar bg="primary">
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>CLOTHSHOP</Navbar.Brand>
+            <Navbar.Brand>  Brewberry Cafe</Navbar.Brand>
           </LinkContainer>
           <SearchBox />
 

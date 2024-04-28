@@ -27,10 +27,10 @@ const ShippingScreen = () => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 />
-      <h1>Shipping</h1>
+      <h1>Order</h1>
       <Form onSubmit={handleShippingAddress}>
         <Form.Group className="py-2" controlId="address">
-          <Form.Label>Address</Form.Label>
+          <Form.Label>Table No.</Form.Label>
           <Form.Control
             type="text"
             placeholder="Address"
@@ -39,7 +39,7 @@ const ShippingScreen = () => {
           ></Form.Control>
         </Form.Group>
         <Form.Group className="py-2" controlId="city">
-          <Form.Label>City</Form.Label>
+          <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
             placeholder="City"
@@ -48,7 +48,7 @@ const ShippingScreen = () => {
           ></Form.Control>
         </Form.Group>
         <Form.Group className="py-2" controlId="postalcode">
-          <Form.Label>Postal Code</Form.Label>
+          <Form.Label>Phone No.</Form.Label>
           <Form.Control
             type="text"
             placeholder="Postal Code"
@@ -57,7 +57,7 @@ const ShippingScreen = () => {
           ></Form.Control>
         </Form.Group>
         <Form.Group className="py-2" controlId="country">
-          <Form.Label>Country</Form.Label>
+          <Form.Label>Pick up / Dine In</Form.Label>
           <Form.Control
             type="text"
             placeholder="Country"

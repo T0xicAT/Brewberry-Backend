@@ -86,7 +86,7 @@ const ProductScreen = () => {
                       text={`${product.rating} Reviews`}
                     />
                   </ListGroup.Item>
-                  <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                  <ListGroup.Item>Price: Rs.{product.price}</ListGroup.Item>
                   <ListGroup.Item>
                     Description: {product.description}
                   </ListGroup.Item>
@@ -99,7 +99,7 @@ const ProductScreen = () => {
                       <Row>
                         <Col>Price:</Col>
                         <Col>
-                          <strong>${product.price}</strong>
+                          <strong>Rs.{product.price}</strong>
                         </Col>
                       </Row>
                     </ListGroup.Item>
@@ -147,65 +147,6 @@ const ProductScreen = () => {
                     </ListGroup.Item>
                   </ListGroup>
                 </Card>
-              </Col>
-            </Row>
-            <Row className="mt-4">
-              <Col md={6}>
-                <h2>Reviews</h2>
-                {loadingProductReview && <Loading />}
-                {product.reviews.length === 0 && (
-                  <Message variant="info">No Reviews</Message>
-                )}
-                <ListGroup variant="flush">
-                  {product.reviews.map((review) => (
-                    <ListGroup.Item key={review._id}>
-                      <strong>{review.name}</strong>
-                      <Rating value={review.rating} text="Reviews" />
-                      <p>{review.createdAt.substring(0, 10)}</p>
-                      <p>{review.comment}</p>
-                    </ListGroup.Item>
-                  ))}
-                </ListGroup>
-                <h3>Write a customer review</h3>
-                {userInfo ? (
-                  <Form onSubmit={submitHandler}>
-                    {errorProductReview && (
-                      <Message variant="danger">{errorProductReview}</Message>
-                    )}
-
-                    <Form.Group controlId="rating">
-                      <Form.Label>Rating</Form.Label>
-                      <Form.Control
-                        as="select"
-                        value={rating}
-                        onChange={(e) => setRating(e.target.value)}
-                      >
-                        <option value="">Select ...</option>
-                        <option value="1">1 - Poor</option>
-                        <option value="2">2 - Fair</option>
-                        <option value="3">3 - Good</option>
-                        <option value="4">4 - Very good</option>
-                        <option value="5">5 - Perfect</option>
-                      </Form.Control>
-                    </Form.Group>
-                    <Form.Group className="mt-3" controlId="comment">
-                      <Form.Label>Comment</Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
-                        placeholder="Comment"
-                      ></Form.Control>
-                    </Form.Group>
-                    <Button type="submit" className="mt-3" vatiant="primary">
-                      Submit
-                    </Button>
-                  </Form>
-                ) : (
-                  <Message variant="info">
-                    <Link to="/login">Sign in</Link> to write a review
-                  </Message>
-                )}
               </Col>
             </Row>
           </>

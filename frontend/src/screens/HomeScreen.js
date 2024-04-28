@@ -26,9 +26,9 @@ const HomeScreen = () => {
 
   return (
     <>
-      <Meta title="Clothshop | Home" />
+      <Meta title="Brewberry | Home" />
       {/* {!keyword && <ProductCarousel />} */}
-      <h3>Latest Products</h3>
+      <h3>OUR MENU</h3>
       <Row>
         {loading ? (
           <Loading />

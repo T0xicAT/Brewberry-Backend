@@ -25,12 +25,12 @@ const CartScreen = () => {
 
   return (
     <>
-      <Meta title="Clothshop | Cart" />
+      <Meta title="Brewberry | Cart" />
       <Link className="btn btn-light my-3" to="/">
         Go Home
       </Link>
       <Row>
-        <h2 className="mb-4">Shopping Cart</h2>
+        <h2 className="mb-4">Order Cart</h2>
         {cartItems.length === 0 ? (
           <Message variant="info">
             Your cart is empty <Link to="/">Go Back</Link>
@@ -51,7 +51,7 @@ const CartScreen = () => {
                             {cart.name}
                           </Link>
                         </h5>
-                        <h4 className="py-2">${cart.price}</h4>
+                        <h4 className="py-2">Rs. {cart.price}</h4>
                       </Col>
                       <Col>
                         <FormControl
@@ -96,7 +96,7 @@ const CartScreen = () => {
                       ) Items
                     </h4>
                     <h5 className="mt-3">
-                      $
+                      Rs.
                       {cartItems
                         .reduce((acc, item) => acc + item.qty * item.price, 0)
                         .toFixed(2)}

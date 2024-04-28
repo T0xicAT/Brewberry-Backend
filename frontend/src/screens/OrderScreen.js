@@ -91,7 +91,7 @@ const OrderScreen = () => {
             <Col md={8}>
               <ListGroup variant="flush">
                 <ListGroup.Item>
-                  <h4>Shipping</h4>
+                  <h4>Order</h4>
                   <p>
                     <strong>Name: </strong>
                     {order.user.name}
@@ -101,7 +101,7 @@ const OrderScreen = () => {
                       {order.user.email}
                     </a>
                   </p>
-                  <strong>Address:</strong>
+                  <strong>Table No.:</strong>
                   <p>
                     {order.shippingAddress.address},{" "}
                     {order.shippingAddress.city}{" "}
@@ -151,7 +151,7 @@ const OrderScreen = () => {
                               </Link>
                             </Col>
                             <Col md={4}>
-                              {item.qty} x ${item.price} = $
+                              {item.qty} x Rs.{item.price} = Rs.
                               {item.qty * item.price}
                             </Col>
                           </Row>
@@ -171,25 +171,25 @@ const OrderScreen = () => {
                   <ListGroup.Item>
                     <Row>
                       <Col>Items</Col>
-                      <Col>${order.itemsPrice}</Col>
+                      <Col>Rs. {order.itemsPrice}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Shipping</Col>
-                      <Col>${order.shippingPrice}</Col>
+                      <Col>Order</Col>
+                      <Col>Rs. {order.shippingPrice}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Tax</Col>
-                      <Col>${order.taxPrice}</Col>
+                      <Col>Rs. {order.taxPrice}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Total</Col>
-                      <Col>${order.totalPrice}</Col>
+                      <Col>Rs. {order.totalPrice}</Col>
                     </Row>
                     <ListGroup.Item>
                       {!order.isPaid && (
