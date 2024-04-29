@@ -1,8 +1,4 @@
-# clothshopp
 
-Online Clothing Store using the MERN stack
-
-![screenshot](https://i.ibb.co/kDtJPNy/clothshop.png)
 
 ## Features:
 
@@ -76,4 +72,4 @@ npm run data:destroy
 
 - Version: 1.0.0
 - License: MIT
-- Author: Said Mounaim
+- Author:Avinash
